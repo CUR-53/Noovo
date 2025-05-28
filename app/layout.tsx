@@ -15,7 +15,7 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-  title: 'Noovo — High-Performance Websites & Shopify Apps, Custom-Built',
+  title: 'High-Performance Websites & Shopify Apps, Custom-Built - Noovo',
   description:
     'Noovo is a web studio specializing in fast, modern websites and Shopify apps using Next.js, React, and headless technologies. From custom storefronts to full-stack solutions, we build digital experiences that convert.',
 };
