@@ -1,17 +1,17 @@
-"use client"
+'use client';
 
-import { Menu } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
-import Link from "next/link"
-import { useState } from "react"
+import { Menu } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
+import Link from 'next/link';
+import { useState } from 'react';
 
 export function MobileMenu() {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false);
 
   const handleLinkClick = () => {
-    setOpen(false)
-  }
+    setOpen(false);
+  };
 
   return (
     <Sheet open={open} onOpenChange={setOpen}>
@@ -30,50 +30,26 @@ export function MobileMenu() {
           </SheetTitle>
         </SheetHeader>
         <nav className="mt-8 flex flex-col gap-6">
-          <Link
-            href="#services"
-            className="text-base font-medium text-muted-foreground hover:text-emerald-500 transition-colors"
-            onClick={handleLinkClick}
-          >
+          <Link href="#services" className="text-base font-medium text-muted-foreground hover:text-emerald-500 transition-colors" onClick={handleLinkClick}>
             Services
           </Link>
-          <Link
-            href="#portfolio"
-            className="text-base font-medium text-muted-foreground hover:text-emerald-500 transition-colors"
-            onClick={handleLinkClick}
-          >
+          <Link href="#portfolio" className="text-base font-medium text-muted-foreground hover:text-emerald-500 transition-colors" onClick={handleLinkClick}>
             Portfolio
           </Link>
-          <Link
-            href="#tech-stack"
-            className="text-base font-medium text-muted-foreground hover:text-emerald-500 transition-colors"
-            onClick={handleLinkClick}
-          >
+          <Link href="#tech-stack" className="text-base font-medium text-muted-foreground hover:text-emerald-500 transition-colors" onClick={handleLinkClick}>
             Tech Stack
           </Link>
-          <Link
-            href="#process"
-            className="text-base font-medium text-muted-foreground hover:text-emerald-500 transition-colors"
-            onClick={handleLinkClick}
-          >
+          <Link href="#process" className="text-base font-medium text-muted-foreground hover:text-emerald-500 transition-colors" onClick={handleLinkClick}>
             Process
           </Link>
-          <Link
-            href="#testimonials"
-            className="text-base font-medium text-muted-foreground hover:text-emerald-500 transition-colors"
-            onClick={handleLinkClick}
-          >
+          <Link href="#testimonials" className="text-base font-medium text-muted-foreground hover:text-emerald-500 transition-colors" onClick={handleLinkClick}>
             Testimonials
           </Link>
-          <Link
-            href="#contact"
-            className="text-base font-medium text-muted-foreground hover:text-emerald-500 transition-colors"
-            onClick={handleLinkClick}
-          >
+          <Link href="#contact" className="text-base font-medium text-muted-foreground hover:text-emerald-500 transition-colors" onClick={handleLinkClick}>
             Contact
           </Link>
         </nav>
       </SheetContent>
     </Sheet>
-  )
+  );
 }
