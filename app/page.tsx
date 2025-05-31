@@ -122,7 +122,7 @@ export default function LandingPage() {
                 </p>
               </div>
             </div>
-            <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
+            <div className="mx-auto grid max-w-5xl items-start gap-6 py-12 lg:grid-cols-2 lg:gap-12">
               <div className="group relative overflow-hidden rounded-xl border border-border bg-card/50 p-6 transition-all hover:border-emerald-500/50 hover:bg-card">
                 <div className="absolute -right-20 -top-20 h-40 w-40 rounded-full bg-emerald-500/10 blur-3xl transition-all group-hover:bg-emerald-500/20"></div>
                 <div className="flex flex-col gap-4">
@@ -148,10 +148,10 @@ export default function LandingPage() {
                     <code className="text-xs text-emerald-400">
                       <pre>
                         {`// Server Component
-export default async function Page() {
-  const data = await getData()
-  return <Component data={data} />
-}`}
+                          export default async function Page() {
+                            const data = await getData()
+                            return <Component data={data} />
+                          }`}
                       </pre>
                     </code>
                   </div>
@@ -183,19 +183,19 @@ export default async function Page() {
                     <code className="text-xs text-emerald-400">
                       <pre>
                         {`// Shopify Storefront API Query
-const PRODUCTS_QUERY = \`
-  query Products {
-    products(first: 10) {
-      edges {
-        node {
-          id
-          title
-          handle
-        }
-      }
-    }
-  }
-\``}
+                          const PRODUCTS_QUERY = \`
+                            query Products {
+                              products(first: 10) {
+                                edges {
+                                  node {
+                                    id
+                                    title
+                                    handle
+                                  }
+                                }
+                              }
+                            }
+                          \``}
                       </pre>
                     </code>
                   </div>
@@ -247,20 +247,6 @@ const PRODUCTS_QUERY = \`
                   </div>
                   <h3 className="text-xl font-bold">{tech.title}</h3>
                   <p className="mt-2 text-muted-foreground">{tech.description}</p>
-                </div>
-              ))}
-            </div>
-            <div className="mt-12 flex flex-wrap items-center justify-center gap-8">
-              {[
-                '/tech-logos/nextjs.png',
-                '/tech-logos/react.png',
-                '/tech-logos/typescript.png',
-                '/tech-logos/shopify.png',
-                '/tech-logos/vercel.png',
-                '/tech-logos/tailwind.png',
-              ].map((logo, index) => (
-                <div key={index} className="flex h-12 w-24 items-center justify-center grayscale transition-all hover:grayscale-0">
-                  <Image src={logo || '/placeholder.svg'} alt="Technology logo" width={80} height={40} className="h-auto max-h-12 w-auto" />
                 </div>
               ))}
             </div>
